@@ -1,0 +1,8 @@
+.html {
+    margin: 10px;
+}
+.tasks ul {
+    list-style-type: square;
+    list-style-position: outside;
+;
+}
