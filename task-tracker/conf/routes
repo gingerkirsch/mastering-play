@@ -5,7 +5,7 @@
 # Tasks
 GET     /                           controllers.TaskController.index
 GET     /tasks                      controllers.TaskController.tasks
-+ nocsrf
+
 POST    /tasks                      controllers.TaskController.newTask
 + nocsrf
 DELETE  /tasks/:id                  controllers.TaskController.deleteTask(id: Int)

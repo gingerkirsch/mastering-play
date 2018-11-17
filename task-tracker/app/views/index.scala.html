@@ -1,8 +1,10 @@
-@(tasks: List[Task])
-@main("Task Tracker") {
+@(tasks: List[Task])(implicit requestHeader: RequestHeader)
+    @import helper._
+    @main("Task Tracker") {
     <h2>Task Tracker</h2>
     <div>
         <form method="post" action="@routes.TaskController.newTask">
+            @CSRF.formField
             <input type="text" name="taskName" placeholder="Add a new Task" required>
             <input type="submit" value="Add">
         </form>
